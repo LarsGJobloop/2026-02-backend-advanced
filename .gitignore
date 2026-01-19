@@ -1,0 +1,3 @@
+# Ignore ephemeral files and folders
+obj
+bin
