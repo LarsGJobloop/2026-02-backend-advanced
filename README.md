@@ -2,4 +2,4 @@
 
 ## Problemstilling
 
-Vi trenger en klasse som kan utføre matematiske kalkulasjoner.
+Vi trenger en API Tjeneste some kan lagre minner.
