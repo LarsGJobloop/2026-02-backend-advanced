@@ -2,13 +2,15 @@
 
 public class SumSpecification
 {
-    [Fact]
-    public void SumOfTwoNumbers_ShouldReturnCorrect_Sum()
+    [Theory]
+    [InlineData(2, 2, 4)]
+    [InlineData(10, 10, 20)]
+    [InlineData(0, 0, 0)]
+    [InlineData(-10, 10, 0)]
+    [InlineData(100, 100, 200)]
+    public void SumOfTwoNumbers_ShouldReturnCorrect_Sum(int a, int b, int expectedResult)
     {
         // Arrange
-        var a = 2;
-        var b = 2;
-        var expectedResult = 4;
         var calculator = new Utilities.Calculator();
 
         // Act
