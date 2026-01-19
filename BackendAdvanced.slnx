@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MemoryService/MemoryService.csproj" />
+  </Folder>
   <Project Path="Calculator.Spec/Calculator.Spec.csproj" />
   <Project Path="Utilities/Utilities.csproj" />
 </Solution>
