@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/spec/">
+    <Project Path="spec/MemoryService.Spec/MemoryService.Spec.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/MemoryService/MemoryService.csproj" />
   </Folder>
