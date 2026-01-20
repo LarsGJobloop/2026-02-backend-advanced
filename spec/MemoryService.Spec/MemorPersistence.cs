@@ -37,7 +37,8 @@ public class MemorPersistence
     var response = await client.PostAsJsonAsync("/memory", memory);
     // It's a success
     response.EnsureSuccessStatusCode();
-    var parsedRespons = response.Content.ReadFromJsonAsync<Memory>();
+    var parsedRespons = await response.Content.ReadFromJsonAsync<Memory>();
+    Assert.NotNull(parsedRespons);
 
     // And I try to retrieve it
     var retrieveResponse = await client.GetFromJsonAsync<Memory>($"/memory/{parsedRespons.Id}");
