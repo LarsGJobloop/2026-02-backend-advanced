@@ -1,3 +1,5 @@
+using Contracts;
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -22,15 +24,3 @@ app.MapGet("/memory/{memoryId}", (int memoryId) =>
 app.MapGet("/healthz", () => "Ok");
 
 app.Run();
-
-
-class MemoryCreateRequest
-{
-  public required string Content { get; init; }
-}
-
-class Memory
-{
-  public required int Id { get; init; }
-  public required string Content { get; init; }
-}
