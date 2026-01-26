@@ -1,4 +1,9 @@
 services:
+  landing-page:
+    image: landing-page
+    ports:
+      - "3000:80"
+
   my-service:
     image: testing
     ports:
