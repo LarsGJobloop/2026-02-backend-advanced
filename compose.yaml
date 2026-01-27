@@ -30,3 +30,21 @@ services:
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+
+  # PosgreSQL is a Database Management System DBMS
+  # This is the first thing you want to outsource
+  database:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: memories
+    # Expose the port so we can debug it
+    # with a local client
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+volumes:
+  postgres_data:
