@@ -13,7 +13,7 @@ services:
       dockerfile: Dockerfile
     labels:
       - "traefik.http.routers.api.rule=Host(`api.localhost`)"
-      - "traefik.http.services.landing-page.loadbalancer.server.port=8080"
+      - "traefik.http.services.api.loadbalancer.server.port=8080"
 
   # Platform servicess
   # These you often outsource to platforms
