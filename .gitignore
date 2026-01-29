@@ -1,3 +1,5 @@
 # Ignore ephemeral files and folders
 obj
 bin
+# Non-Windows fix
+bin\\*
