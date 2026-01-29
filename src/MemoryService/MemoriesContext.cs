@@ -6,7 +6,7 @@ public class MemoriesContext : DbContext
   public DbSet<UserMemory> Memories { get; set; }
 
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-      => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;User=admin;Passord=password;Database=memories");
+      => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;User Id=admin;Password=password;Database=memories");
 }
 
 public class UserMemory
