@@ -16,6 +16,7 @@ app.MapPost("/memory", (MemoriesContext context, MemoryCreateRequest createReque
   };
   // Persist memeory
   context.Memories.Add(newMemory);
+  context.SaveChanges();
   // Possibly return memory
   return newMemory;
 });
