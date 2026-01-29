@@ -1,24 +1,22 @@
+using Microsoft.EntityFrameworkCore;
 using Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MemoriesContext>();
+
 var app = builder.Build();
 
-var memories = new List<Memory>();
-
-app.MapPost("/memory", (MemoryCreateRequest createRequest) =>
+app.MapPost("/memory", (MemoriesContext context, MemoryCreateRequest createRequest) =>
 {
-  var newMemory = new Memory
-  {
-    Id = 0,
-    Content = createRequest.Content
-  };
-  memories.Add(newMemory);
-  return newMemory;
+  // Create new memory 
+  // Persist memeory
+  // Possibly return memory
 });
 
-app.MapGet("/memory/{memoryId}", (int memoryId) =>
+app.MapGet("/memory/{memoryId}", (MemoriesContext context, int memoryId) =>
 {
-  return memories.First(memory => memory.Id == memoryId);
+  // Find the memeory
+  // Return
 });
 
 app.MapGet("/healthz", () => "Ok");
