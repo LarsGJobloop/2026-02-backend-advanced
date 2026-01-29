@@ -11,6 +11,6 @@ public class MemoriesContext : DbContext
 
 public class UserMemory
 {
-  public required int Id { get; init; }
+  public required Guid Id { get; init; }
   public required string Content { get; init; }
 }
