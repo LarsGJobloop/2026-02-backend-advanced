@@ -21,6 +21,11 @@ app.MapPost("/memory", (MemoriesContext context, MemoryCreateRequest createReque
   return newMemory;
 });
 
+app.MapGet("/memory", (MemoriesContext context) =>
+{
+  return context.Memories.ToList();
+});
+
 app.MapGet("/memory/{memoryId}", (MemoriesContext context, Guid memoryId) =>
 {
   // Find the memeory
