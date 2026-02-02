@@ -45,3 +45,13 @@ Container Teknologi er det som er mest vanlig å  bruke for å lever i fra seg p
 ## Tester
 
 ![Hva er tester?](/docs/hva-er-tester.excalidraw.png)
+
+## Teknologier
+
+- [ASP .NET](https://dotnet.microsoft.com/en-us/apps/aspnet): C# web framework
+- [xUnit](https://xunit.net/?tabs=cs): C# testing library
+- [PostgreSQL](https://www.postgresql.org/): Relational Database
+- [Traefik](https://traefik.io/traefik): Application Proxy/Reverse Proxy/Ingress
+- [Docker Desktop](https://docs.docker.com/desktop/): Local container runtime and UI
+- [OCI Manifests](https://github.com/opencontainers/image-spec/blob/main/manifest.md): Standard distribution format for Containers
+- [Terraform](https://developer.hashicorp.com/terraform): Imperative IaC tooling
