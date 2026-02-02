@@ -3,3 +3,8 @@ obj
 bin
 # Non-Windows fix
 bin\\*
+
+# Infrastructure as Code
+.terraform
+*.tfvars
+*.tfstate*

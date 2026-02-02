@@ -14,13 +14,24 @@
         "aarch64-linux" # TODO! NOT Verified
         "aarch64-darwin"
       ];
-      withPkgs = callback: withSystem (system: callback (import nixpkgs { inherit system; }));
+      withPkgs =
+        callback:
+        withSystem (
+          system:
+          callback (
+            import nixpkgs {
+              inherit system;
+              config.allowUnfree = true;
+            }
+          )
+        );
     in
     {
       devShells = withPkgs (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
             dotnetCorePackages.sdk_10_0-bin
+            terraform
           ];
         };
       });
