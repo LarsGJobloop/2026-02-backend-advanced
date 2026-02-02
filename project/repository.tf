@@ -21,6 +21,9 @@ resource "github_repository" "repository" {
   name       = "2026-02-backend-advanced"
   visibility = "public"
 
+  # Metadata
+  description = "Lecture repo for backend advanced for Kodehode 2026-02"
+
   # Features
   has_issues   = true
   has_projects = true
