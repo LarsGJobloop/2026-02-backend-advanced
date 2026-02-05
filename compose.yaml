@@ -1,5 +1,5 @@
 services:
-  hello-world:
-    image: nginx
+  api:
+    image: ghcr.io/larsgjobloop/memoryservice:main-b5b9e47
     ports:
       - 80:80
