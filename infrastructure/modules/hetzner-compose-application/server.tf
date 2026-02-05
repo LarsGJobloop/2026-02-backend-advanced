@@ -5,7 +5,7 @@ resource "hcloud_ssh_key" "admin_key" {
 
 resource "hcloud_server" "server" {
   name        = "lecture-server"
-  server_type = "cx33" # AMD 4vCPU, 8GB RAM, 80 SSD
+  server_type = "cax41" # ARM 16vCPU, 32GB RAM, 320 SSD
   image       = "debian-13"
   location    = "hel1" # Helsinki, Finland
 
