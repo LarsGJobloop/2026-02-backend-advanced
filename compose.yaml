@@ -1,5 +1,5 @@
 services:
   api:
-    image: ghcr.io/larsgjobloop/memoryservice:lates
+    image: ghcr.io/larsgjobloop/memoryservice:latest
     ports:
-      - 80:80
+      - 80:8080
