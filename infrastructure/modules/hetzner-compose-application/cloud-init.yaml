@@ -1,6 +1,6 @@
 #cloud-config
 
-runmcd:
+runcmd:
   # mkdir makes a directory at a path
   - "mkdir /app"
   # touch creates a file at a path
