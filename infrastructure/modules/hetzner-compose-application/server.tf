@@ -9,6 +9,8 @@ resource "hcloud_server" "server" {
   image       = "debian-13"
   location    = "hel1" # Helsinki, Finland
 
+  user_data = file("${path.module}/cloud-init.yaml")
+
   ssh_keys = [
     hcloud_ssh_key.admin_key.id
   ]
