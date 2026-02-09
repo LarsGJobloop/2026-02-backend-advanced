@@ -55,3 +55,7 @@ Container Teknologi er det som er mest vanlig å  bruke for å lever i fra seg p
 - [Docker Desktop](https://docs.docker.com/desktop/): Local container runtime and UI
 - [OCI Manifests](https://github.com/opencontainers/image-spec/blob/main/manifest.md): Standard distribution format for Containers
 - [Terraform](https://developer.hashicorp.com/terraform): Imperative IaC tooling
+
+## Referanser
+
+- [OAuth CLI Repository](https://github.com/LarsGJobloop/2026-01-12-oauth-cli): Barebones repository for a CLI showcasing how [OAuth2.0 Device Authorization](https://www.oauth.com/oauth2-servers/device-flow/) can be implemented.
