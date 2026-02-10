@@ -19,6 +19,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = false, // Validate the server that issues the token
             ValidateIssuerSigningKey = false, // Validate the signing key
             ValidIssuer = "zitadel.localhost", // Is this Norge/USA/China
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("a-string-secret-at-least-256-bits-long")),
 
             ValidateAudience = false, // Validate the recipient of the token
             ValidAudience = "api.localhost", // This is us
