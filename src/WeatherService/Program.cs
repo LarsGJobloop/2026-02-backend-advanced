@@ -37,7 +37,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
+// We dont hava a TLS certificate
+// app.UseHttpsRedirection();
 
 // Actually use Authorization
 app.UseAuthorization();
