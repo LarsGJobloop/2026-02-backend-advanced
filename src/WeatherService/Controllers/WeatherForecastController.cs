@@ -21,6 +21,12 @@ public class WeatherForecastController : ControllerBase
         // Access the Authorization object
         var claimsPrincipal = User;
 
+        // You can review all the available claims (for debugging/development)
+        foreach (var claim in claimsPrincipal.Claims)
+        {
+            Console.WriteLine(claim);
+        }
+
         // Look through it for the information you need
         // Often just the User/Subject ID, that is the basis of ownership semantics
         var userId = claimsPrincipal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
