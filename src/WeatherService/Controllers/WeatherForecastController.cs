@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WeatherSerice.Controllers;
@@ -16,6 +18,14 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+        // Access the Authorization object
+        var claimsPrincipal = User;
+
+        // Look through it for the information you need
+        // Often just the User/Subject ID, that is the basis of ownership semantics
+        var userId = claimsPrincipal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+
+
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
